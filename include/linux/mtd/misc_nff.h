@@ -9,7 +9,7 @@
 #ifndef __MISC_H
 #define __MISC_H
 
-#include "hisi_partition.h"
+//#include "hisi_partition.h"
 
 #define MISC_DEVICE_NAME          BLK_MTD_MISC
 #define MISC_WRITE                0           /*MISC write operation*/
