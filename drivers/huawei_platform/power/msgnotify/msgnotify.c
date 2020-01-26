@@ -10,6 +10,7 @@
 #include <linux/sched.h>
 #include <linux/time.h>
 #include <linux/kernel_stat.h>
+#include <huawei_platform/power/msgnotify.h>
 
 #define MSG_NOT_PROCESSING	0
 #define MSG_PROCESSING	1
