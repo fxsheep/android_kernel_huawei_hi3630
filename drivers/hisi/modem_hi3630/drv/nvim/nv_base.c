@@ -1873,9 +1873,9 @@ void modem_nv_delay(void)
     int i;
 
     /*最长等待时长5s*/
-    for(i=0;i<5000;i++)
+    for(i=0;i<500;i++)
     {
-        if( 0 == (i+1)%1000 )/*每超过1s，打印记录一次*/
+        if( 0 == (i+1)%100 )/*每超过1s，打印记录一次*/
         {
             nv_printf("modem nv wait for mtd device %d ms\n",i);
         }
