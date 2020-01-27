@@ -442,10 +442,10 @@ static int k3v3_pm_enter(suspend_state_t state)
 
 #ifdef CONFIG_HISI_SR_DEBUG
 	debuguart_reinit();
-#endif
 	pm_gic_pending_dump();
 	pm_nvic_pending_dump();
 	pm_status_show();
+#endif
 	local_irq_restore(flag);
 	printk("k3v3_pm_enter --\n");
 
