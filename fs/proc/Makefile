@@ -33,5 +33,5 @@ proc-$(CONFIG_PROC_VMCORE)	+= vmcore.o
 proc-$(CONFIG_PRINTK)	+= kmsg.o
 proc-$(CONFIG_PROC_PAGE_MONITOR)	+= page.o
 proc-$(CONFIG_FEATURE_HUAWEI_EMERGENCY_DATA)  += emerg_data.o
-proc-y	+= check_root.o
+#proc-y	+= check_root.o
 proc-$(CONFIG_PROC_POSTFSDATA)         += post-fs-data.o
