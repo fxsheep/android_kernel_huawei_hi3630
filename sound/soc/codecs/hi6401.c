@@ -3364,7 +3364,9 @@ static void anc_hs_charging_control(struct hi6401_priv *priv)
 		}else {
 			if(gpio_get_value(p_anc_hs->gpio_mic_sw) == SWITCH_CHIP_5VBOOST){
 				pr_err("%s(%u) : gpio status is not right !\n", __FUNCTION__, __LINE__);
+#ifdef CONFIG_HUAWEI_DSM
 				anc_dsm_report(p_anc_hs, ANC_HS_MIC_WITH_GPIO_ERR, 0);
+#endif
 			}
 		}
 		anc_hs_dump(p_anc_hs);
@@ -3382,7 +3384,9 @@ static void anc_hs_charging_control(struct hi6401_priv *priv)
 						0);
 				if(!ret) {
 					pr_info("%s(%u) : queue work failed\n", __FUNCTION__, __LINE__);
+#ifdef CONFIG_HUAWEI_DSM
 					anc_dsm_report(p_anc_hs, ANC_HS_QUEUE_WORK_ERR, 0);
+#endif
 				}
 				pr_info("%s(%u) : resume charging for anc hs =%d!\n", __FUNCTION__, __LINE__,ret);
 			}
